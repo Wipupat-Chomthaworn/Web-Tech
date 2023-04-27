@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: BlinkMacSystemFont, BlinkMacSystemFont, sans-serif;
+        }
+        .list-group{
+            display: grid;
+            grid-template-columns:repeat(2,1fr);
+            gap: 40px;
+        }
+        .img-items{
+            color: rgb(255, 255, 255);
+            background-color: black;
+            border: 1px solid red;
+            text-align: center;
+            padding: 10px;
+        }
+        img{
+            max-width: 100%;
+        }
+        @media screen and (max-width:600px){
+            .list-group{
+                display: grid;
+                grid-template-columns:repeat(1,1fr);
+                gap: 20px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Popular cat names</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia molestiae, sapiente impedit veniam alias quam, consectetur eius rerum aperiam adipisci natus debitis fugit corrupti. Necessitatibus, nihil! Suscipit explicabo facilis delectus.</p>
+    <div>
+        <h3>List of cat names</h3>
+        <div class="list-group">
+            <div class="img-items">
+                <img src="https://images4.alphacoders.com/206/20658.jpg">
+                <h4>Oscar</h4>
+            </div>
+            <div class="img-items">
+                <img src="https://images4.alphacoders.com/206/20658.jpg">
+                <h4>Oscar</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

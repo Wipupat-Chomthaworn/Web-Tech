@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javascript.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-secondary">
+    <div class="container">
+        <div class="row">
+            <div class="card m-4 p-5 col w-50 bg-white">
+                <form id="form" role="form">
+                    <h1>Create your card</h1>
+                    <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="fname" placeholder="name surename">
+                    </div>
+                    <div class="form-group">
+                    <label for="Phone">Phone</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Tel.">
+                    </div>
+                    <div class="form-group">
+                        <label for="E-mail">E-mail</label>
+                        <input type="text" class="form-control" id="mail" placeholder="Example@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="Company">Company</label>
+                        <input type="text" class="form-control" id="company" placeholder="Company">
+                    </div>
+                    <button type="button" onclick="createcard()" class="btn btn-primary btn-lg btn-block">Create</button>
+                </form>
+            </div>
+            <div class="m-4 p-5 col w-50 bg-secondary">
+                <form id="form2" role="form2">
+                    <h4 class="text-center">Your card here</h4>
+                    <div class="card-right form-group card text-white">
+                        <img class="card-img" src="https://image.bangkokbiznews.com/uploads/images/contents/w1024/2022/08/lofjbankbNZZGnetSm2M.webp" style="filter: blur(2.5px);" alt="Card image">
+                        <div class="card-img-overlay margin">
+                            <h4 id="iname">Your name</h4>
+                            <p id="iphone">Your phone number</p>
+                            <p id="imail">Your e-mail</p>
+                            <p id="icompany">Your company</h5>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

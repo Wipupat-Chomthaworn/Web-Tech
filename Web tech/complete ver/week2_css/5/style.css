@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+div{
+    height:350px;
+    width:300px;
+    overflow:auto;
+    font-family: 'Prompt', sans-serif;
+    display: flex;
+}

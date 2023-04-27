@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Prompt&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="input-container">
+      <label for="question">คำถาม: </label>
+      <input type="text" name="question" id="question" />
+      <form>
+        <div class="radio">
+          <label>
+            <input type="radio" name="check" value="a" id="ch1" />
+            A
+            <input type="text" name="" id="ans1" />
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="check" value="b" id="ch2" />
+            B
+            <input type="text" name="" id="ans2" />
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="check" value="c" id="ch3" />
+            C
+            <input type="text" name="" id="ans3" />
+          </label>
+        </div>
+      </form>
+      <button onClick="checknull()">เพิ่มข้อสอบ</button>
+    </div>
+    <div class="output" id="output">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>ข้อที่</th>
+            <th>คำถาม</th>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>คำตอบ</th>
+          </tr>
+        </thead>
+        <tbody id="aaa"></tbody>
+      </table>
+    </div>
+
+    <script>
+      let requestURL = "questions.json";
+      let request = new XMLHttpRequest();
+      request.onreadystatechange = function () {
+        if (request.readyState == 4 && request.status == 200) {
+          dataReportStatus(JSON.parse(request.responseText));
+        }
+      };
+      request.open("GET", requestURL, true);
+      request.send();
+      var lol = 3;
+      function dataReportStatus(data) {
+        for (i = 0; i < data.length; i++) {
+          let tr = document.createElement("tr");
+          let num = document.createElement("td");
+          let q = document.createElement("td");
+          let a = document.createElement("td");
+          let b = document.createElement("td");
+          let c = document.createElement("td");
+          let ans = document.createElement("td");
+          num.innerHTML = i + 1;
+          q.innerHTML = data[i].question;
+          console.log(data[i].question);
+          for (j in data[i].answers) {
+            if (j == "a") {
+              a.innerHTML = data[i].answers[j];
+            }
+            if (j == "b") {
+              b.innerHTML = data[i].answers[j];
+            }
+            if (j == "c") {
+              c.innerHTML = data[i].answers[j];
+            }
+            if (j == "correct") {
+              ans.innerHTML = data[i].answers[j];
+            }
+          }
+          tr.appendChild(num);
+          tr.appendChild(q);
+          tr.appendChild(a);
+          tr.appendChild(b);
+          tr.appendChild(c);
+          tr.appendChild(ans);
+          let tbody = document.getElementById("aaa");
+          tbody.appendChild(tr);
+        }
+      }
+      let checknull = () => {
+        alert("aaaa");
+        let question = document.getElementById("question").value;
+        let ans1 = document.getElementById("ans1").value;
+        let ans2 = document.getElementById("ans2").value;
+        let ans3 = document.getElementById("ans3").value;
+        let ch1 = document.getElementById("ch1").value;
+        let ch2 = document.getElementById("ch2").value;
+        let ch3 = document.getElementById("ch3").value;
+        console.log(ans1, ans2, ans3, ch1, ch2, ch3, question);
+        if (
+          ans1 != null &&
+          ans2 != null &&
+          ans3 != null &&
+          question != null &&
+          (ch1 != null || ch2 != null || ch3 != null)
+        ) {
+          let tr = document.createElement("tr");
+          let num = document.createElement("td");
+          let q = document.createElement("td");
+          let a = document.createElement("td");
+          let b = document.createElement("td");
+          let c = document.createElement("td");
+          let ans = document.createElement("td");
+          lol += 1;
+          num.innerHTML = lol;
+          q.innerHTML = question;
+          a.innerHTML = ans1;
+          b.innerHTML = ans2;
+          c.innerHTML = ans3;
+          ans.innerHTML = ch1+ch2+ch3;
+          tr.appendChild(num);
+          tr.appendChild(q);
+          tr.appendChild(a);
+          tr.appendChild(b);
+          tr.appendChild(c);
+          tr.appendChild(ans);
+          let tbody = document.getElementById("aaa");
+          tbody.appendChild(tr);
+        }
+      };
+    </script>
+  </body>
+</html>
+<style>
+  body {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-family: "Prompt", sans-serif;
+    width: 100vw;
+    height: 100vh;
+  }
+</style>
+<!--63070090 Noppanut khammueang-->>

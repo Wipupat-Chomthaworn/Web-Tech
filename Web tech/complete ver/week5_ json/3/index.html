@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let requestURL = 'countries.json';
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (request.readyState == 4 && request.status == 200) {
+                ExtractData(JSON.parse(request.responseText));
+            } };
+        request.open("GET", requestURL, true);
+        request.send();
+
+        document.write("<h1>Quiz 1</h1>")
+        function ExtractData(data) {
+            for (let country of data) {
+                // code
+                document.write(`<div class="detail" style="position:relative; height:300px; width:100%"`)
+                document.write(`
+                <br>
+                Name:${country.name}<br>
+                Capital:${country.capital}<br>
+                Population:${country.population}<br>
+                Region:${country.region}<br>
+                Location:${country.latlng[0]} ${country.latlng[1]}<br>
+                Border:
+                `)
+                for(let border of country.borders){
+                    document.write(`${border} `)
+                }
+                document.write(`<br><br>`)
+                document.write(`<img src="${country.flag}" style="width:25%;position:absolute;right:0; top:10;">`)
+                document.write(`</div>`)
+            }
+        }
+    </script>
+
+</body>
+</html>

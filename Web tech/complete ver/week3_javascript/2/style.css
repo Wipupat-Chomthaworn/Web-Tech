@@ -1,0 +1,16 @@
+.name{
+    width: 49%;
+    float: left;
+}
+.lname{
+    width: 49%;
+    float: right;
+}
+.subdistrict{
+    width: 49%;
+    float: left;
+}
+.district{
+    width: 49%;
+    float: right;
+}

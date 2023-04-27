@@ -1,0 +1,14 @@
+.row{
+    display: flex;
+}
+.box{
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid black;
+}
+#table :nth-child(odd) :nth-child(even){
+    background-color: black;
+}
+#table :nth-child(even) :nth-child(odd){
+    background-color: black;
+}
