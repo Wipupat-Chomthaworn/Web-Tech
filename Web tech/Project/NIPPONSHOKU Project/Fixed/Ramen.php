@@ -16,7 +16,7 @@
   <title>replit</title>
   <link href="menu.css" rel="stylesheet" type="text/css" />
   <style>
-  body {
+    body {
       -webkit-text-stroke: 0.5px black;
       font-family: 'Roboto Slab', serif;
       background-size: cover;
@@ -183,7 +183,7 @@
       color: #999;
       height: 5vh;
     }
-        .navbar-promotion img, .navbar-home img{
+    .navbar-promotion img, .navbar-home img{
       height: 95px; 
       opacity: 0.5;
     }
@@ -194,7 +194,7 @@
     .navbar-promotion img:hover, .navbar-home img:hover{
       height: 95px; opacity: 1;      
     }
-  </style>
+</style>
 </head>
 
 <body>
@@ -268,14 +268,14 @@
         </a>
       </div>
 
-      <div class="item-selected">
+      <div class="item">
         <a style="text-decoration:none" href="Sushi.php">
           <img src="img/newsushi.jpg" alt="" width=100%>
           <div class="text"><p>SUSHI</p></div>
         </a>
       </div>
 
-      <div class="item">
+      <div class="item-selected">
         <a style="text-decoration:none" href="Ramen.php">
           <img src="img/newramen.jpg" alt="" width=100%>
           <div class="text"><p>RAMEN</p></div>
@@ -305,7 +305,8 @@
     </div>
   </div>
   <div class="recommendbar"></div>
-  <div class="product"></div>
+  <div class="product">
+  </div>
   <footer>
     <div class="container">
       <div class="sec aboutus">

@@ -19,7 +19,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"
     />
-    <title>replit</title>
+    <title>NIPPONSHOKU GA TABEITAI</title>
     <link href="cart.css" rel="stylesheet" type="text/css" />
     <link
       rel="stylesheet"
@@ -519,7 +519,8 @@
 
       <div class="container-fluid">
         <a class="navbar-menu" href="Sashimi.php">
-          <img id="navbar-menu" src="img/Menu_selected.png" alt="logo" />          <!--         <h1 class="nav-name">Menu</h1> -->
+          <img id="navbar-menu" src="img/Menu_selected.png" alt="logo" />
+          <!--         <h1 class="nav-name">Menu</h1> -->
         </a>
       </div>
       <!--     nev trolley login -->
@@ -563,13 +564,13 @@
       <div class="swiper-wrapper">
         <!-- Slides -->
         <div class="swiper-slide">
-          <img src="img/1000.png" alt="" />
+          <img src="img/Set1.png" alt="" />
           <div class="add-to-cart" onclick="getSet1(id)">
             <img src="./icons/bag-plus.png" alt="add to cart" />
           </div>
         </div>
         <div class="swiper-slide">
-          <img src="img/500.png" alt="" />
+          <img src="img/Set2.png" alt="" />
           <div class="add-to-cart" onclick="getSet2(id)">
             <img src="./icons/bag-plus.png" alt="add to cart" />
           </div>
@@ -656,7 +657,12 @@
     <script src="sweetalert2.all.min.js"></script>
     <script src="promotion.js"></script>
     <script src="index.js"></script>
-
+  <script>
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    var fname = page.split('.php').reverse().pop();
+    var fname = fname.toLowerCase();
+  </script>
     <script>
       const mySwiper = new Swiper(".swiper-container", {
         // Optional parameters
@@ -778,7 +784,7 @@
         updateCart();
       }
     </script>
-    <script>
+ <script>
       if (localStorage.getItem("Name").length > 0) {
           console.log("hi");
           <?php $access = true; ?>
