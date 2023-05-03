@@ -2,6 +2,7 @@
 a respository that contain some source that aim to make Website and Learn in HTML CSS and JS
 
 # Japanese Food Online Store
+![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
 This is a web technology project for an online store that sells Japanese food, such as sashimi, sushi, and dessert. The project is built using HTML, CSS, JavaScript, XAMPP, and SQLite.
 
