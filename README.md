@@ -38,14 +38,15 @@ You can watch a demo of the project on YouTube: https://youtu.be/wB9VS0L_R74
 
 Here are some screenshots from the demo:
 
-![Homepage](https://example.com/demo/homepage.png)
+![Homepage](https://github.com/Wipupat-Chomthaworn/Web-Tech/blob/main/Project/Picture/homepage.png)
+![Promotion](https://github.com/Wipupat-Chomthaworn/Web-Tech/blob/main/Project/Picture/promotion.png)
 
-![Catalog](https://example.com/demo/catalog.png)
-
-![Product Details](https://example.com/demo/product-details.png)
-
-![Cart](https://example.com/demo/cart.png)
-
-![Order History](https://example.com/demo/order-history.png)
+![Sign up](https://github.com/Wipupat-Chomthaworn/Web-Tech/blob/main/Project/Picture/signin.png)
+![Log in](https://github.com/Wipupat-Chomthaworn/Web-Tech/blob/main/Project/Picture/login.png)
+![Catalog-sashimi](https://github.com/Wipupat-Chomthaworn/Web-Tech/blob/main/Project/Picture/sashimi.png)
+![Catalog-dessert](https://github.com/Wipupat-Chomthaworn/Web-Tech/blob/main/Project/Picture/dessert.png)
+![Catalog-sushi](https://github.com/Wipupat-Chomthaworn/Web-Tech/blob/main/Project/Picture/sushi.png)
+![Add to Cart](https://github.com/Wipupat-Chomthaworn/Web-Tech/blob/main/Project/Picture/addorder.png)
+![Checkout Details](https://github.com/Wipupat-Chomthaworn/Web-Tech/blob/main/Project/Picture/checkout.png)
 
 Feel free to submit bug reports, feature requests, or pull requests.
